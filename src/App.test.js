@@ -1,17 +1,16 @@
 import { render } from "@testing-library/react";
 import App from "./App";
-import { login } from "./libs";
-
-// run mocks
-// login("tester@ui.dev", "test123");
+import { testLogin } from "./libs";
 
 test("renders app", () => {
-  render(<App />);
+	render(<App />);
 });
 
-test("the fetch fails with an error", () => {
-  expect.assertions(1);
-  return login("tester@ui.dev", "test123").catch((e) =>
-    expect(e).toBeDefined()
-  );
+test("testLogin fetch fails with an error", async () => {
+	expect.assertions(1);
+	try {
+		await testLogin("tester@ui.dev", "test123");
+	} catch (e) {
+		expect(e).toMatch("error");
+	}
 });
