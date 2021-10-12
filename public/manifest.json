@@ -1,6 +1,6 @@
 {
-	"short_name": "UI Evolved",
-	"name": "UI Evolved | Front-end development & custom design",
+	"short_name": "Kidsloop",
+	"name": "Kidsloop Login",
 	"icons": [
 		{
 			"src": "favicon.ico",
@@ -8,9 +8,9 @@
 			"type": "image/x-icon"
 		},
 		{
-			"src": "logo.png",
-			"type": "image/png",
-			"sizes": "221x31"
+			"src": "logo.svg",
+			"type": "image/svg",
+			"sizes": "389x259"
 		}
 	],
 	"start_url": ".",
