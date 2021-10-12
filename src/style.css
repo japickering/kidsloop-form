@@ -1,0 +1,324 @@
+:root {
+  --dark: #000;
+  --light: #fff;
+  --background: #f5f5f5;
+  --text: #000;
+  --card: #fafafa;
+  --primary: #4677b3;
+  --secondary: #17377b;
+  --error: #d00000;
+  --success: green;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  font-size: 12px;
+  color: currentColor;
+  border: 1px solid hsl(0deg 0% 0% / 25%);
+  border-radius: 12px;
+}
+
+a,
+a:link {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+button,
+.btn {
+  display: inline-block;
+  line-height: 1;
+  font-size: 12px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--light);
+  border-radius: 12px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: var(--dark);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  /* background-color: var(--secondary); */
+  border: 1px solid var(--secondary);
+  color: var(--light);
+}
+
+.container {
+  position: relative;
+  width: fit-content;
+  width: -webkit-fit-content;
+  /* min-width: 320px; */
+  margin: 0 auto;
+}
+
+.card {
+  max-width: 320px;
+  margin: 25px 0;
+  padding: 24px;
+  font-size: 11px;
+  background: inherit;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.25);
+}
+
+.card-header,
+.card-content,
+.card-footer {
+  padding: 0;
+  background: inherit;
+  color: var(--text);
+  border: 0;
+}
+
+.card .row {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 36px;
+  margin: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-group input {
+  margin-bottom: 12px;
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+span.error {
+  margin-bottom: 12px;
+  color: var(--error);
+}
+
+.form-group .icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.fa-check {
+  font-size: 15px;
+  color: var(--success);
+}
+
+.fa-times {
+  font-size: 15px;
+  color: var(--error);
+}
+
+.logo {
+  border: 0;
+  outline: 0;
+  width: 33%;
+}
+
+/* footer {
+  display: flex;
+  flex-direction: row;
+} */
+
+footer a {
+  font-size: 12px;
+}
+
+footer ul.footer-links {
+  float: right;
+  margin-right: 4px;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+footer ul li:last-child {
+  margin-right: 0;
+}
+
+.dropdown {
+  position: absolute;
+  display: block;
+  top: 90%;
+  left: 12%;
+}
+
+.dropdown-menu li,
+.dropdown-menu li a {
+  display: block;
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  padding: 8px 10px;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+  text-decoration: none;
+}
+
+.theme-toggle {
+  display: inline-block;
+  margin-bottom: 1em;
+  background: transparent;
+  border: 1px solid transparent;
+  width: 24px;
+  height: 24px;
+}
+
+.theme-toggle:hover::after,
+.theme-toggle:focus::after {
+  content: "Toggle dark mode";
+  position: absolute;
+  bottom: -25px;
+  left: 0px;
+  padding: 8px;
+  background: var(--light);
+  color: var(--dark);
+}
+
+.night {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.night .card-title,
+.night a {
+  color: var(--light);
+}
+
+.night .card {
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+}
+
+.night .dropdown-toggle {
+  background-color: inherit;
+  color: var(--dark);
+}
+
+.night .dropdown-item {
+  color: var(--dark);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .day {
+    background: var(--dark);
+    color: var(--light);
+  }
+
+  .day .card-title,
+  .day a {
+    color: var(--light);
+  }
+
+  .day .card {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+  }
+
+  .day .dropdown-toggle {
+    background-color: inherit;
+    color: var(--light);
+  }
+
+  .day .dropdown-item {
+    color: var(--dark);
+  }
+
+  .night {
+    background: var(--light);
+    color: var(--dark);
+  }
+
+  .night .card-title,
+  .night a {
+    color: var(--dark);
+  }
+
+  .night .card {
+    box-shadow: 0 0 20px 5px rgba(10, 10, 10, 0.5);
+  }
+
+  .night .dropdown-toggle {
+    background-color: inherit;
+    color: var(--dark);
+  }
+
+  .night .dropdown-item {
+    color: var(--dark);
+  }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  .day {
+    background: var(--light);
+    color: var(--dark);
+  }
+
+  .day .card-title,
+  .day a {
+    color: var(--dark);
+  }
+
+  .day .card {
+    box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.5);
+  }
+
+  .day .dropdown-toggle {
+    background-color: inherit;
+    color: var(--dark);
+  }
+
+  .day .dropdown-item {
+    color: var(--dark);
+  }
+}
