@@ -14,24 +14,9 @@ export function login(email, password, setLoading) {
 	})
 		.then((response) => response.json())
 		.then((result) => {
-			console.log(result);
+			// console.log(result);
+			console.log("Welcome " + result.name + "!");
 			setLoading(false);
-		})
-		.catch((err) => console.log(err));
-}
-
-export function testLogin(email, password) {
-	fetch("https://my-json-server.typicode.com/kidsloop-test/accounts/sign-in", {
-		method: "PATCH",
-		headers: {
-			"Content-Type": "application/json;charset=utf-8",
-		},
-		body: JSON.stringify({ email: email, password: password }),
-	})
-		.then((response) => response.json())
-		.then((result) => {
-			console.log(result);
-			return JSON.parse(result);
 		})
 		.catch((err) => console.log(err));
 }

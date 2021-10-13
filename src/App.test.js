@@ -6,7 +6,7 @@ test("renders app", () => {
 	render(<App />);
 });
 
-test("testLogin fetch fails with an error", async () => {
+/* test("testLogin fetch fails with an error", async () => {
 	expect.assertions(1);
 	try {
 		await testLogin("tester@ui.dev", "test123");
@@ -14,3 +14,4 @@ test("testLogin fetch fails with an error", async () => {
 		expect(e).toMatch("error");
 	}
 });
+ */
